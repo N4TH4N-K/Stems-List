@@ -170,8 +170,8 @@ const questions13 = [
     hint: "malevolent, malcontent, malicious, malady, malice, malaria, malign, malignity" }, {
     question: "post-",
     answers : [
-        { text : "against", correct: true },
-        { text : "after", correct: false },
+        { text : "against", correct: false },
+        { text : "after", correct: true },
         { text : "forward", correct: false },
         { text : "beyond", correct: false }
     ],
