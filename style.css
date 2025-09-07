@@ -19,11 +19,12 @@ body {
 }
 
 .app h1 {
-    font-size: 32px;
+    font-size: 28px; /* Reduced font size for better readability */
     color: #021;
     font-weight: 600;
     border-bottom: 2px solid #333;
     padding-bottom: 16px;
+    text-align: center; /* Centered the title */
 }
 
 .quiz {
@@ -32,33 +33,34 @@ body {
     padding-top: 50px;
 }
 
-.quiz h2{
-    font-size: 24px;
+.quiz h2 {
+    font-size: 22px; /* Slightly smaller font size for better fit */
     color: #132;
     font-weight: 750;
     padding: 50px 10px 10px;
+    text-align: center; /* Centered the question */
 }
 
-.btn{
-    font-size: 15px;
+.btn {
+    font-size: 16px; /* Adjusted font size for readability */
     background: #eef;
     color: #202020;
     font-weight: 500;
     width: 100%;
     border: 1px solid #303030;
-    padding: 10px;
+    padding: 12px; /* Increased padding for better touch targets */
     margin: 9px 0;
-    text-align: left;
+    text-align: center; /* Centered the button text */
     border-radius: 5px;
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background: #221;
     color: #ffe;
 }
 
-#next{
+#next {
     background: #558;
     color: #ffe;
     font-weight: 500;
@@ -92,11 +94,11 @@ body {
 .hint-btn {
     background-color: #4CAF50;
     color: white;
-    padding: 8px 15px;
-    font-size: 15px;
-    border: 1px;
+    padding: 10px 15px;
+    font-size: 16px; /* Adjusted for mobile */
+    border: 1px solid #303030;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: 10px;
     border-radius: 4px;
 }
 
@@ -115,8 +117,44 @@ body {
 
 #hint-text {
     color: #222;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
     font-family: 'Arial', sans-serif;
     text-align: center;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+@media (max-width: 600px) {
+    /* Ensure the app takes up most of the screen and is centered */
+    .app {
+        width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+
+    /* Adjust heading size */
+    .app h1 {
+        font-size: 24px; /* Reduced size */
+    }
+
+    /* Make buttons stack vertically */
+    .quiz {
+        display: block;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller buttons on mobile */
+        padding: 12px;
+    }
+
+    #next {
+        width: 100%; /* Make Next button full width */
+        padding: 15px;
+    }
+
+    .hint-btn {
+        width: 100%; /* Full width for hint button */
+    }
 }
