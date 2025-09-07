@@ -9,60 +9,114 @@ body {
     background: #052;
 }
 
-.app { /* To refrence a class you have to add a period*/
+.app {
     background: #efe;
     width: 90%;
-    max-width: 600;
+    max-width: 500px;
     margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
 }
 
 .app h1 {
-    font-size: 30px;
+    font-size: 32px;
     color: #021;
     font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 31px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 16px;
 }
 
 .quiz {
+    display: none;
     padding: 20px 0;
+    padding-top: 50px;
 }
 
 .quiz h2{
-    font-size: 20px;
+    font-size: 24px;
     color: #132;
-    font-weight: 600;
+    font-weight: 750;
+    padding: 50px 10px 10px;
 }
 
 .btn{
+    font-size: 15px;
     background: #eef;
     color: #202020;
     font-weight: 500;
     width: 100%;
     border: 1px solid #303030;
     padding: 10px;
-    margin: 11px 0;
+    margin: 9px 0;
     text-align: left;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .btn:hover{
-    background: #110;
+    background: #221;
     color: #ffe;
 }
 
-#next{ /* use # for IDs */
+#next{
     background: #558;
     color: #ffe;
     font-weight: 500;
     width: 150px;
-    border: 0.1;
+    border: 0;
     padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
     cursor: pointer;
-    display: block; /* makes it go to the center */
+    display: block;
+}
+
+.correct {
+    background: #8eb;
+}
+
+.incorrect {
+    background: #ff8d8d;
+}
+
+.start {
+    background: #558;
+    color: #eef;
+    font-weight: 500;
+    display: block;
+    margin: 20px auto 0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.hint-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    font-size: 15px;
+    border: 1px;
+    cursor: pointer;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+.hint-btn:hover {
+    background-color: #595;
+}
+
+.hint-content {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+}
+
+#hint-text {
+    color: #222;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
 }
