@@ -215,13 +215,7 @@ const hintContent = document.getElementById("hint-content");
 const hintText = document.getElementById("hint-text");
 
 hintButton.addEventListener("click", () => {
-    if (hintContent.classList.contains("show")) {
-        hintContent.classList.remove("show");
-        hintButton.textContent = "Show Hint";
-    } else {
-        hintContent.classList.add("show");
-        hintButton.textContent = "Hide Hint";
-    }
+    hintContent.style.display = "block";
 });
 
 startButton14.addEventListener("click", () => {
@@ -252,10 +246,7 @@ function showQuestion() {
 
     const currentQuestion = currentQuestions[currentQuestionIndex];
     questionElement.innerHTML = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
-    
-    // reset hint
-    hintContent.classList.remove("show");
-    hintButton.textContent = "Show Hint";
+    hintContent.style.display = "none"; // Hide hint content again
     hintText.innerText = currentQuestion.hint || "";
 
     shuffle(currentQuestion.answers).forEach(answer => {
@@ -267,6 +258,7 @@ function showQuestion() {
         options.appendChild(button);
     });
 }
+
 
 function resetState() {
     nextButton.style.display = "none";
@@ -304,24 +296,25 @@ nextButton.addEventListener("click", () => {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${currentQuestions.length}!`;
+    questionElement.innerHTML = `You scored ${score} out of 25!`;
     nextButton.style.display = "none";
 
     const playAgain = document.createElement("button");
     playAgain.innerHTML = "Play Again";
     playAgain.classList.add("btn");
-    playAgain.addEventListener("click", startQuiz);
+    playAgain.addEventListener("click", () => { startQuiz(currentQuestions); });
     options.appendChild(playAgain);
 
     const homePage = document.createElement("button");
     homePage.innerHTML = "Home &#9166;";
     homePage.classList.add("btn");
-    homePage.addEventListener("click", () => { window.location.href = "index.html"; });
+    homePage.addEventListener("click", () => { window.location.href = "file:///C:/Users/nkond/Downloads/Stems-List/index.html"; });
     options.appendChild(homePage);
 
     const nextList = document.createElement("button");
     nextList.innerHTML = "Next List &#8594;";
     nextList.classList.add("btn");
-    nextList.addEventListener("click", () => { window.location.href ="list15.html"; });
+    nextList.addEventListener("click", () => { window.location.href ="file:///C:/Users/nkond/Downloads/Stems-List/list14.html"; });
     options.appendChild(nextList);
 }
+
