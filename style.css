@@ -7,71 +7,64 @@
 
 body {
     background: #052;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
 }
 
 .app {
     background: #efe;
-    width: 100%;
+    width: 90%;
     max-width: 500px;
-    margin: auto;
+    margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .app h1 {
-    font-size: 28px;
+    font-size: 32px;
     color: #021;
     font-weight: 600;
     border-bottom: 2px solid #333;
-    padding-bottom: 12px;
-    text-align: center;
+    padding-bottom: 16px;
 }
 
-.quiz h2 {
-    font-size: 22px;
+.quiz {
+    display: none;
+    padding: 20px 0;
+    padding-top: 50px;
+}
+
+.quiz h2{
+    font-size: 24px;
     color: #132;
-    font-weight: 700;
-    margin: 20px 0 10px;
-    text-align: center;
+    font-weight: 750;
+    padding: 50px 10px 10px;
 }
 
-.btn {
-    font-size: 16px;
+.btn{
+    font-size: 15px;
     background: #eef;
     color: #202020;
     font-weight: 500;
     width: 100%;
     border: 1px solid #303030;
-    padding: 12px;
-    margin: 8px 0;
+    padding: 10px;
+    margin: 9px 0;
     text-align: left;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
 }
 
-.btn:hover {
+.btn:hover{
     background: #221;
     color: #ffe;
 }
 
-.btn:active {
-    transform: scale(0.97);
-}
-
-#next {
+#next{
     background: #558;
     color: #ffe;
     font-weight: 500;
     width: 150px;
     border: 0;
-    padding: 12px;
+    padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
     cursor: pointer;
@@ -79,13 +72,11 @@ body {
 }
 
 .correct {
-    background: #4CAF50;
-    color: white;
+    background: #8eb;
 }
 
 .incorrect {
-    background: #f44336;
-    color: white;
+    background: #ff8d8d;
 }
 
 .start {
@@ -103,17 +94,14 @@ body {
     color: white;
     padding: 8px 15px;
     font-size: 15px;
-    border: none;
+    border: 1px;
     cursor: pointer;
-    margin-top: 12px;
+    margin-top: 8px;
     border-radius: 4px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .hint-btn:hover {
-    background-color: #388E3C;
+    background-color: #595;
 }
 
 .hint-content {
@@ -122,14 +110,7 @@ body {
     border: 1px solid #333;
     border-radius: 5px;
     margin-top: 10px;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.hint-content.show {
-    display: block;
-    opacity: 1;
+    display: none; /* Initially hidden */
 }
 
 #hint-text {
