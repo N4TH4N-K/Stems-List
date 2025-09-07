@@ -308,13 +308,14 @@ function showScore() {
     const homePage = document.createElement("button");
     homePage.innerHTML = "Home &#9166;";
     homePage.classList.add("btn");
-    homePage.addEventListener("click", () => { window.location.href = "file:///C:/Users/nkond/Downloads/Stems-List/index.html"; });
+    homePage.addEventListener("click", () => { window.location.href = "https://stems-list.onrender.com/index.html"; });
     options.appendChild(homePage);
 
     const nextList = document.createElement("button");
     nextList.innerHTML = "Next List &#8594;";
     nextList.classList.add("btn");
-    nextList.addEventListener("click", () => { window.location.href ="file:///C:/Users/nkond/Downloads/Stems-List/list14.html"; });
+    nextList.addEventListener("click", () => { window.location.href ="https://stems-list.onrender.com/list15.html"; });
     options.appendChild(nextList);
 }
+
 
