@@ -216,6 +216,7 @@ const hintText = document.getElementById("hint-text");
 
 hintButton.addEventListener("click", () => {
     hintContent.style.display = "block";
+    hintText.style.display = "block";
 });
 
 startButton14.addEventListener("click", () => {
@@ -229,6 +230,7 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next &#8594;";
+    hintButton.style.display = "block";
     nextButton.style.display = "none";
     showQuestion();
 }
