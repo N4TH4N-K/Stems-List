@@ -7,57 +7,62 @@
 
 body {
     background: #052;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .app {
     background: #efe;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
-    margin: 100px auto 0;
+    margin: auto;
     border-radius: 10px;
     padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .app h1 {
-    font-size: 28px; /* Reduced font size for better readability */
+    font-size: 28px;
     color: #021;
     font-weight: 600;
     border-bottom: 2px solid #333;
-    padding-bottom: 16px;
-    text-align: center; /* Centered the title */
-}
-
-.quiz {
-    display: none;
-    padding: 20px 0;
-    padding-top: 50px;
+    padding-bottom: 12px;
+    text-align: center;
 }
 
 .quiz h2 {
-    font-size: 22px; /* Slightly smaller font size for better fit */
+    font-size: 22px;
     color: #132;
-    font-weight: 750;
-    padding: 50px 10px 10px;
-    text-align: center; /* Centered the question */
+    font-weight: 700;
+    margin: 20px 0 10px;
+    text-align: center;
 }
 
 .btn {
-    font-size: 16px; /* Adjusted font size for readability */
+    font-size: 16px;
     background: #eef;
     color: #202020;
     font-weight: 500;
     width: 100%;
     border: 1px solid #303030;
-    padding: 12px; /* Increased padding for better touch targets */
-    margin: 9px 0;
-    text-align: center; /* Centered the button text */
-    border-radius: 5px;
+    padding: 12px;
+    margin: 8px 0;
+    text-align: left;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
     background: #221;
     color: #ffe;
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 #next {
@@ -66,7 +71,7 @@ body {
     font-weight: 500;
     width: 150px;
     border: 0;
-    padding: 10px;
+    padding: 12px;
     margin: 20px auto 0;
     border-radius: 4px;
     cursor: pointer;
@@ -74,11 +79,13 @@ body {
 }
 
 .correct {
-    background: #8eb;
+    background: #4CAF50;
+    color: white;
 }
 
 .incorrect {
-    background: #ff8d8d;
+    background: #f44336;
+    color: white;
 }
 
 .start {
@@ -94,16 +101,19 @@ body {
 .hint-btn {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 15px;
-    font-size: 16px; /* Adjusted for mobile */
-    border: 1px solid #303030;
+    padding: 8px 15px;
+    font-size: 15px;
+    border: none;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 12px;
     border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hint-btn:hover {
-    background-color: #595;
+    background-color: #388E3C;
 }
 
 .hint-content {
@@ -112,49 +122,20 @@ body {
     border: 1px solid #333;
     border-radius: 5px;
     margin-top: 10px;
-    display: none; /* Initially hidden */
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hint-content.show {
+    display: block;
+    opacity: 1;
 }
 
 #hint-text {
     color: #222;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     font-family: 'Arial', sans-serif;
     text-align: center;
-}
-
-/* Media Queries for Mobile Responsiveness */
-
-@media (max-width: 600px) {
-    /* Ensure the app takes up most of the screen and is centered */
-    .app {
-        width: 90%;
-        margin: 50px auto;
-        padding: 15px;
-    }
-
-    /* Adjust heading size */
-    .app h1 {
-        font-size: 24px; /* Reduced size */
-    }
-
-    /* Make buttons stack vertically */
-    .quiz {
-        display: block;
-        padding: 10px;
-    }
-
-    .btn {
-        font-size: 14px; /* Smaller buttons on mobile */
-        padding: 12px;
-    }
-
-    #next {
-        width: 100%; /* Make Next button full width */
-        padding: 15px;
-    }
-
-    .hint-btn {
-        width: 100%; /* Full width for hint button */
-    }
 }
